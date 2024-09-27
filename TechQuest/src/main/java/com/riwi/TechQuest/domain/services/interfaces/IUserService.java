@@ -1,4 +1,4 @@
-package com.riwi.TechQuest.domain.services.Interface;
+package com.riwi.TechQuest.domain.services.interfaces;
 
 import com.riwi.TechQuest.domain.entities.UserEntity;
 import com.riwi.TechQuest.domain.services.crud.Create;
