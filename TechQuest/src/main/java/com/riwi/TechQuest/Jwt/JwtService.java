@@ -8,13 +8,14 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
 
 import java.security.Key;
+import java.security.PrivateKey;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 @Service
 public class JwtService {
 
-    private static final String SECRET_KEY = "!<grT'A=}D#Qa>C&nMoP6jYc|MBYI;VhTX%e|r@kPU=W[DXMqn}hcvxA5;4Xz";
+    private static final String SECRET_KEY = "BjeraabZDmZ2H0IHOB53oGQqe79X4XlLfoGJV+qLoe0=";
 
     public String getToken(UserDetails user){
         return getToken(new HashMap<>(), user);
@@ -22,11 +23,11 @@ public class JwtService {
 
     private String getToken(Map<String, Object> extraClaims, UserDetails user){
         return Jwts.builder()
-                .claims(extraClaims)
-                .subject(user.getUsername())
-                .issuedAt(new Date(System.currentTimeMillis()))
-                .expiration(new Date(System.currentTimeMillis()+1000*60*24))
-                .signWith(getKey(), SignatureAlgorithm.ES256)
+                .setClaims(extraClaims)
+                .setSubject(user.getUsername())
+                .setIssuedAt(new Date(System.currentTimeMillis()))
+                .setExpiration(new Date(System.currentTimeMillis()+1000*60*24))
+                .signWith(getKey(), SignatureAlgorithm.HS256)
                 .compact();
 
     }
