@@ -1,8 +1,8 @@
-package com.riwi.TechQuest.domain.auth;
+package com.riwi.TechQuest.domain.model.auth;
 
-import com.riwi.TechQuest.Jwt.JwtService;
-import com.riwi.TechQuest.application.utils.enums.Roles;
-import com.riwi.TechQuest.domain.entities.UserEntity;
+import com.riwi.TechQuest.infrastructure.Jwt.JwtService;
+import com.riwi.TechQuest.domain.model.enums.Roles;
+import com.riwi.TechQuest.domain.model.entities.UserEntity;
 import com.riwi.TechQuest.domain.repositories.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,4 +1,4 @@
-package com.riwi.TechQuest.Jwt;
+package com.riwi.TechQuest.infrastructure.Jwt;
 
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;

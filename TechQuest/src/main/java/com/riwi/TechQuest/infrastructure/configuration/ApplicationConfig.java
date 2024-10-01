@@ -1,4 +1,4 @@
-package com.riwi.TechQuest.configuration;
+package com.riwi.TechQuest.infrastructure.configuration;
 
 import com.riwi.TechQuest.domain.repositories.UserRepository;
 import lombok.RequiredArgsConstructor;

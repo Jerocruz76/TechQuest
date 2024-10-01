@@ -1,6 +1,6 @@
-package com.riwi.TechQuest.domain.entities;
+package com.riwi.TechQuest.domain.model.entities;
 
-import com.riwi.TechQuest.application.utils.enums.Roles;
+import com.riwi.TechQuest.domain.model.enums.Roles;
 import jakarta.persistence.*;
 import lombok.*;
 import org.springframework.security.core.GrantedAuthority;

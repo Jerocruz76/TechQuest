@@ -1,4 +1,5 @@
-package com.riwi.TechQuest.domain.auth;
+package com.riwi.TechQuest.domain.model.auth;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -8,7 +9,6 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class LoginRequest {
-    private String email;
-    private String password;
+public class AuthResponse {
+    String token;
 }

@@ -1,6 +1,6 @@
-package com.riwi.TechQuest.configuration;
+package com.riwi.TechQuest.infrastructure.configuration;
 
-import com.riwi.TechQuest.Jwt.JwtAuthenticationFilter;
+import com.riwi.TechQuest.infrastructure.Jwt.JwtAuthenticationFilter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
