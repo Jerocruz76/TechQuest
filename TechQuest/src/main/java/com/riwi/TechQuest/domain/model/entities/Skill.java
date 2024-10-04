@@ -21,6 +21,7 @@ public class Skill {
     @Column(name = "description", nullable = false)
     private String description;
 
+    @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "student_id", nullable = false, referencedColumnName = "id")
-    private UserEntity student_id;
+    private UserEntity studentId;
 }

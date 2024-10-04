@@ -1,14 +1,17 @@
 package com.riwi.TechQuest.application.services.interfaces;
 
+import com.riwi.TechQuest.application.dto.request.SkillRequest;
+import com.riwi.TechQuest.application.dto.response.SkillResponse;
 import com.riwi.TechQuest.application.services.crud.Delete;
 import com.riwi.TechQuest.application.services.crud.Update;
 import com.riwi.TechQuest.domain.model.entities.Skill;
 import com.riwi.TechQuest.application.services.crud.Create;
 import com.riwi.TechQuest.application.services.crud.GetByName;
+import jakarta.transaction.Transactional;
 
 public interface ISkillService extends
-        Create<Skill, Skill>,
+        Create<SkillRequest, SkillResponse>,
         Delete<Long>,
-        GetByName<Skill, String>,
-        Update<Long, Skill> {
+        GetByName<SkillResponse, String>,
+        Update<Long, SkillRequest> {
 }

@@ -38,6 +38,10 @@ public class UserEntity implements UserDetails {
     @Enumerated(EnumType.STRING)
     private Roles role;
 
+    public UserEntity(UserEntity userEntity) {
+        this.id = userEntity.getId();
+    }
+
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return List.of(new SimpleGrantedAuthority(role.name()));

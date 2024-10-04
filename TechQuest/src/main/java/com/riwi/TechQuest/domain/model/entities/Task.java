@@ -28,9 +28,11 @@ public class Task {
     @Column(name = "progress", nullable = false, length = 100)
     private Float progress;
 
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "teacher_id", referencedColumnName = "id", nullable = false)
-    private UserEntity teacher_id;
+    private UserEntity teacherId;
 
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "student_id", referencedColumnName = "id", nullable = false)
-    private UserEntity student_id;
+    private UserEntity studentId;
 }
