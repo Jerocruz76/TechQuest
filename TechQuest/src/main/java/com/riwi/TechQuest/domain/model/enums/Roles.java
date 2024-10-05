@@ -1,7 +1,11 @@
 package com.riwi.TechQuest.domain.model.enums;
 
 public enum Roles {
-    ADMIN,
-    TEACHER,
-    STUDENT
+    ROLE_ADMIN,
+    ROLE_TEACHER,
+    ROLE_STUDENT;
+
+    public String getName() {
+        return this.name();
+    }
 }

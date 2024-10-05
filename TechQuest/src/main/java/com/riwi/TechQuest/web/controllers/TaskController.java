@@ -3,6 +3,7 @@ package com.riwi.TechQuest.web.controllers;
 import com.riwi.TechQuest.application.dto.request.TaskRequest;
 import com.riwi.TechQuest.application.dto.response.TaskResponse;
 import com.riwi.TechQuest.application.services.Impl.TaskService;
+import com.riwi.TechQuest.domain.model.entities.Task;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -27,7 +28,7 @@ public class TaskController {
 
     @GetMapping("/findByTitle/{title}")
     public ResponseEntity<TaskResponse> findByTitle(@PathVariable String title){
-        TaskResponse task = taskService.getByTitle(title);
+        TaskResponse task = taskService.findByTitle(title);
         return new ResponseEntity<>(task, HttpStatus.OK);
     }
 

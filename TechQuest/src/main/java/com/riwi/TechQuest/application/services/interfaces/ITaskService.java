@@ -8,6 +8,6 @@ import com.riwi.TechQuest.domain.model.entities.Task;
 public interface ITaskService extends
         Create<TaskRequest,TaskResponse>,
         Delete<Long>,
-        GetByTitle<TaskResponse, String>,
+        FindByTitle<TaskResponse, String>,
         Update<Long, TaskRequest> {
 }

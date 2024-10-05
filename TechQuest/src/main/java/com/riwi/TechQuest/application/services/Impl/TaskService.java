@@ -61,11 +61,19 @@ public class TaskService implements ITaskService {
     }
 
     @Override
-    public TaskResponse getByTitle(String title) {
+    public TaskResponse findByTitle(String title) {
         try{
-            Optional<TaskResponse> taskOptional = taskRepository.getByTitle(title);
+            Optional<Task> taskOptional = taskRepository.getByTitle(title);
             if(taskOptional.isPresent()){
-                return taskOptional.get();
+                Task task = taskOptional.get();
+                return TaskResponse.builder()
+                        .title(task.getTitle())
+                        .description(task.getDescription())
+                        .difficulty(task.getDifficulty())
+                        .progress(task.getProgress())
+                        .teacherId(task.getTeacherId() != null ? task.getTeacherId().getId() : null)
+                        .studentId(task.getStudentId() != null ? task.getTeacherId().getId() : null)
+                        .build();
             } else{
                 throw new RuntimeException("Task not found");
             }
